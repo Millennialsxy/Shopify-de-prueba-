@@ -153,7 +153,7 @@ h1, .h0, .h1 {
 .trust-bar__wrap { display:flex; gap:3.2rem; align-items:center; }
 .trust-item { display:flex; gap:1rem; align-items:center; color: rgba(var(--color-base-text),0.9); }
 .trust-item__icon svg { width:28px; height:28px; fill: rgb(var(--color-brand-gold)); }
-.trust-item__text { font-weight:600; }
+.trust-item__text { font-weight:600; color: #000000; font-size: 13px; }
 
 /* Gold badge for urgency */
 .badge--gold { background: rgb(var(--color-brand-gold)); color: rgb(var(--color-base-background-1)); border-radius: 6px; padding: .35rem .6rem; font-weight:700; }
