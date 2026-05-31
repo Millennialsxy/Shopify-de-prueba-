@@ -91,7 +91,9 @@
             {%- if card_product.available == false -%}
               <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-              <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+              <span class="badge badge--bottom-left badge--gold">OFERTA</span>
+            {%- elsif card_product.total_inventory <= 5 and card_product.available -%}
+              <span class="badge badge--bottom-left badge--gold">ÚLTIMAS UNIDADES</span>
             {%- endif -%}
           </div>
         </div>
@@ -141,7 +143,9 @@
           {%- if card_product.available == false -%}
             <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+            <span class="badge badge--bottom-left badge--gold">OFERTA</span>
+          {%- elsif card_product.total_inventory <= 5 and card_product.available -%}
+            <span class="badge badge--bottom-left badge--gold">ÚLTIMAS UNIDADES</span>
           {%- endif -%}
         </div>
       </div>

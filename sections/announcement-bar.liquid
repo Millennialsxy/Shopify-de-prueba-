@@ -20,9 +20,35 @@
   {%- endcase -%}
 {%- endfor -%}
 
+{%- if section.settings.marquee_enabled -%}
+  <div class="announcement-marquee" role="region" aria-label="Anuncios importantes">
+    <div class="page-width">
+      <div class="marquee">
+        <div class="marquee__track" aria-hidden="true">
+          <span class="marquee__item">🚚 Envío gratis sobre $49.990 a todo Chile</span>
+          <span class="marquee__item">⭐ +5.000 clientes satisfechos</span>
+          <span class="marquee__item">🔒 Compra 100% segura</span>
+          <!-- duplicate for seamless loop -->
+          <span class="marquee__item">🚚 Envío gratis sobre $49.990 a todo Chile</span>
+          <span class="marquee__item">⭐ +5.000 clientes satisfechos</span>
+          <span class="marquee__item">🔒 Compra 100% segura</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "marquee_enabled",
+      "label": "Habilitar barra animada (marquee)",
+      "default": true
+    }
+  ],
   "max_blocks": 12,
   "blocks": [
     {
