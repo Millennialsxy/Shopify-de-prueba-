@@ -134,7 +134,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "OFERTAS CYBER",
-        "collection": "dia-de-la-madre",
+        "collection": "kits-regalo",
         "products_to_show": 8,
         "color_scheme": "inverse",
         "show_view_all": false,
